@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	
+	<link rel="stylesheet" href="{{url_for('static', filename='css/contentstyle.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+<div class="home-icon">
+	<a class="home-icon-link" href="/">
+			<i class="fa fa-home" aria-hidden="true"></i>
+	</a>
+</div>
+<div class="main-card">
+	<img src="{{result['poster']}}" class="backimg"/>
+	
+	<span id="cardtitle">
+		{{result['title']}}
+	</span>
+	
+	<div class="head1">
+		<p>Type</p>
+		<p>Language</p>
+	</div>
+	<div class="head2">
+		<p>{{result['type']}}</p>
+		<p>{{result['lang']}}</p>
+	</div>
+	<div class="head1">
+		<p>Release Year</p>
+		<p>TMDB</p>
+	</div>
+	<div class="head2">
+		<p>{{result['year']}}</p>
+		<p>{{result['tmdb']}}</p>
+	</div>
+</div>
+
+<div class="info">
+	<h1>
+		<span class="info-title">
+			{{result['title']}}
+		</span>
+	</h1>
+
+	<section class="info-desc">
+		<h1 class="info-desc-heading headig">
+			Description
+		</h1>
+		<p>
+			{{result['desc']}}
+		</p>
+	</section>
+
+	<section class="info-scoring">
+		<div class="info-scoring-imdb">
+				<img src="\static\img\imdb.png" alt="IMDB">
+				<span class="info-scoring-imdb-rating">
+					{{result['imdb']}}
+				</span>
+		</div>
+		
+	</section>
+
+	<section class="info-providers">
+			<h1 class="info-providers-heading heading">
+				Providers
+			</h1>
+			{% for provider in result['providers'] %}
+				<a class="info-providers-link" href= "{{provider['link']}}" >
+					<img src="{{provider['icon']}}" alt="{{provider['name']}}" >
+				</a>
+			{% endfor %}
+		</section>
+
+</div>
+
+{% endblock %}

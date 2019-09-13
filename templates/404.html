@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Muli&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/404.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="msg">
+    <span id="msgtop">
+        Oops
+    </span>
+    <span id="msgbottom">
+        Page not Found
+    </span>
+</div>
+
+<div class="msgrdr">
+    <span id='msgrdr-top'>
+        Go Back
+    </span>
+    <div id="backbtn">
+            <a href="/">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+    </div>
+</div>
+{% endblock %}

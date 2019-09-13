@@ -1,0 +1,59 @@
+
+.msg , .msgrdr{	
+	color:whitesmoke;
+	display: block;
+}
+
+#msgtop{
+	display: block;
+	font-family: 'Dancing Script' , sans-serif;
+	font-size: 9em;
+	position: absolute;
+	top: 40%;
+	left:50%;
+	transform: translate(-50%,-70%);
+
+}
+
+#msgbottom{
+	display: block;
+	font-family: 'Muli' , sans-serif;
+	font-size: 1.5em;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+#msgrdr-top{
+	display: block;
+	font-family: 'Muli' , sans-serif;
+	font-size: 1.5em;
+	position: absolute;
+	top: 70%;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+#backbtn{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	background-color: whitesmoke;
+	position: absolute;
+	top: 75%;
+	left:50%;
+	transform: translateX(-50%);
+	margin-top:10px;
+}
+.fa-arrow-left{
+	text-align: center;
+	color: rgb(43,45,81);
+	font-size: 2em;
+	position: absolute;
+	top: 65%;
+	left:50%;
+	transform: translate(-50%,-70%)
+
+}
+

@@ -1,0 +1,141 @@
+.home-icon{
+	display: inline;
+	position: absolute;
+	top: 35px;
+	right: 60px;
+	border-radius: 50%;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	background-color: white;
+	z-index: 10;
+}
+.home-icon-link>i{
+	position: relative;
+	color: rgb(43,45,81);
+	font-size: 1.6em;
+	padding: auto;
+	
+}
+.main-card{
+	display: block;
+	position: absolute;
+	top:40%;
+	left:25%;
+	transform: translate(-50%,-50%);
+	font-family: 'Lato';
+	border-radius: 30px;
+	height: 530px;
+	width: 300px;
+	margin-top: 4em;
+	background: #e4e9eb;
+  	box-shadow: 0px 20px 100px rgba(211, 210, 226, 0.4);
+}
+
+.backimg{
+	height: 280px;
+	width: 280px;
+	object-fit: cover;
+	
+	margin-left: 10px;
+	margin-top:10px;
+	border-radius: 30px 30px 10px 30px;
+}
+
+#cardtitle{
+	position: relative;
+	top:1em;
+	
+	text-align: center;
+	display: block;
+	font-size: 1.4em;
+	color: black;
+	font-family: 'Rubik',sans-serif;
+	margin-bottom: 50px;
+}
+
+
+.head1{
+	position: absolute;
+	column-count:4;
+	height: 30px;
+	width: 470px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+.head1 p{
+	color: rgba(0,0,0,0.7);
+	text-align: center;	
+	font-size: 1em;
+	
+}
+.head2{
+	column-count:4;
+	height: 30px;
+	width: 470px;
+	margin-top: 0px;
+	margin: 25px auto 40px 30px;
+	position: relative;
+	top: 25px;
+}
+.head2 p{
+	color: rgba(0,0,0,1);
+	text-align: center;	
+	font-size: 1em;
+	font-weight: 700;
+	
+}
+
+.heading{
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.info{
+	position: absolute;
+	box-sizing: content-box;
+	padding-top: 1em;
+	left:40%;
+	
+	margin-top: 3em;
+	color:white;
+	border-left: 2px solid white;
+	padding-left:45px;	
+	height: 85vh;
+}
+
+.info-scoring-imdb >img{
+	width:50px;
+	height:50px;
+	margin: 10px 10px 10px 0;
+	box-shadow: 0px 0px 20px rgba(219, 207, 207,0.3);
+}
+
+.info-scoring-imdb-rating{
+	position: relative;
+	top: 0px;	
+}
+
+.info-desc>p{
+	width:75%;
+	line-height: 1.5em;
+}
+
+.info-title{
+	font-family: 'Ubuntu';
+	font-size: 1.2em;
+	
+}
+.info>h1{
+	margin-bottom: 1.4em;
+}
+
+
+.info-providers-link >img{
+	width:50px;
+	height:auto;
+	margin-right:15px;
+	margin-left: 5px;
+	border-radius: 6px;
+	box-shadow: 0px 0px 20px rgba(219, 207, 207,0.1);
+}
