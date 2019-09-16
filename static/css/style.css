@@ -1,5 +1,6 @@
 
-/* Searchbar */
+/*    Searchbar   */
+
 #cotitle{
     position: relative;
     top:35%;
@@ -40,8 +41,7 @@
     top: 0;
     left: 0;
     width: 100%;;
-    height: 80px;
-    
+    height: 80px;    
     outline: 0;
     border: 0;
     display: none;
@@ -49,8 +49,6 @@
     font-family: 'Ubuntu', sans-serif ;
     border-radius: 44px;
     padding: 0 20px;
-    
-    
 }
 
 .searchbar .fa{
@@ -66,7 +64,6 @@
     text-align: center;
     font-size: 1.8em;
     transition: all 1s;
-    
 }
 
 .searchbar form:hover{
@@ -76,12 +73,10 @@
 
 .searchbar form:hover input{
     display: block;
-    
 }
 
 .searchbar form:hover ::placeholder{
     color: lightgray;
-    
 }
 
 .searchbar form:hover .fa{
@@ -89,164 +84,115 @@
     color: white;    
 }
 
-
-
-/* Searchbar end */
-
-/* Navbar */
-.navb{
-    z-index: 100;
-    backface-visibility: hidden;
-    font-family: 'Roboto';
-    font-size: 1.1em;
-    position: fixed;
-    
-   
-}
-.navbar .navbar-brand , .nav-item{
-    padding: 10px;
-    
-    
-    
-}
-
-.nav-item .nav-link:hover {
-    border-bottom: 2px solid white;
-    color: white !important;
-    font-size: 0.9em;
-    
-}
-
-
-.nav-item>i{
-    border-radius: 50%;
-    padding: 15px;
-    box-sizing: border-box;
-    border: 5px solid white;
-    opacity: 1;
-    position: relative;
-    top:auto;
-    left:70vw;
-    cursor: pointer;
-    color:rgb(43,45,81);
-    font-size: 1.4em;
-    padding:10px;
-    background-color: #fff;
-    transition: all 1s;
-    
-    
-}
-
-.nav-search{
-    opacity: 0 !important;
-}
-
-
-/* Carousel */
+/*     Carousel    */
 
 #carousel {
     position: relative;
     height: 400px;
     top: 30%;
-    
     transform: translateY(-50%);
     overflow: hidden;
-  }
-  #carousel div {
+}
+
+#carousel div {
     position: absolute;
     transition: transform 1s, left 1s, opacity 1s, z-index 0s;
     opacity: 1;
-  }
-  #carousel div img {
-    width: 400px;
-    height: 568px;
+}
+
+#carousel div img {
+    width: 400px;    
     height: auto;
     transition: width 1s;
-    box-shadow: 0px 0px 20px rgba(219, 207, 207,0.5);
-  }
-  #carousel div.hideLeft {
+    box-shadow: 0px 0px 20px rgba(245, 238, 238, 0.5);
+}
+
+#carousel div.hideLeft {
     left: 0%;
     opacity: 0;
     transform: translateY(50%) translateX(-50%);
-  }
-  #carousel div.hideLeft img {
+}
+
+#carousel div.hideLeft img {
     width: 200px;
-  }
-  #carousel div.hideRight {
+}
+
+#carousel div.hideRight {
     left: 100%;
     opacity: 0;
     transform: translateY(50%) translateX(-50%);
-  }
-  #carousel div.hideRight img {
+}
+
+#carousel div.hideRight img {
     width: 200px;
-  }
-  #carousel div.prev {
+}
+
+#carousel div.prev {
     z-index: 5;
     left: 30%;
     transform: translateY(50px) translateX(-50%);
-  }
-  #carousel div.prev img {
+}
+
+#carousel div.prev img {
     width: 300px;
-  }
-  #carousel div.prevLeftSecond {
+}
+
+#carousel div.prevLeftSecond {
     z-index: 4;
     left: 15%;
     transform: translateY(50%) translateX(-50%);
     opacity: 0.7;
-  }
-  #carousel div.prevLeftSecond img {
+}
+
+#carousel div.prevLeftSecond img {
     width: 200px;
-  }
-  #carousel div.selected {
+}
+
+#carousel div.selected {
     z-index: 10;
     left: 50%;
     transform: translateY(0px) translateX(-50%);
-  }
-  #carousel div.next {
+}
+
+#carousel div.next {
     z-index: 5;
     left: 70%;
     transform: translateY(50px) translateX(-50%);
-  }
-  #carousel div.next img {
+}
+  
+#carousel div.next img {
     width: 300px;
   }
-  #carousel div.nextRightSecond {
+
+#carousel div.nextRightSecond {
     z-index: 4;
     left: 85%;
     transform: translateY(50%) translateX(-50%);
     opacity: 0.7;
-  }
-  #carousel div.nextRightSecond img {
+}
+
+#carousel div.nextRightSecond img {
     width: 200px;
-  }
+}
   
- 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-    
-  }
+#carousel button{
+   overflow: hidden;
+   background-color: transparent;
+   border: none;
+   outline: none;
+}
   
-  .carousel-title{
-    position :relative;
+.carousel-title{   
     top:65%;
     background-color: rgb(43,45,81);
-    width: 100%;
+    width: 97%;
     text-align: center;
     color:white;
     font-family: 'Ubuntu';
     font-size: 0.8em;
-  }
+}
 
-  .desc {
+.desc {
     color: white;
     font-size: 20px;
     position: absolute;
@@ -254,9 +200,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-  }
+}
   
-
 footer{
     position: relative;
     text-align: center;

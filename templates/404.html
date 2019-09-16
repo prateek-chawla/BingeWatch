@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block head %}
+
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Muli&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{url_for('static', filename='css/404.css') }}">
+
 {% endblock %}
 
 {% block body %}
+
 <div class="msg">
     <span id="msgtop">
         Oops
@@ -25,4 +28,5 @@
             </a>
     </div>
 </div>
+
 {% endblock %}

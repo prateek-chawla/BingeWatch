@@ -1,5 +1,5 @@
 from flask import Flask , render_template as render , url_for , request , redirect
-from helper import providers,lang , createResponse , getImageLinks
+from helper import createResponse , getImageLinks
 
 app=Flask(__name__) 
 
@@ -15,5 +15,11 @@ def index():
         images=getImageLinks()
         return render('index.html',images=images)
 
+@app.route('/about')
+def about():
+    return render('about.html')
+
 if __name__=="__main__":
-    app.run(host='0.0.0.0' , use_reloader=True, port=5000)
+    app.run(debug=True , use_reloader=True, port=7050)
+
+ 

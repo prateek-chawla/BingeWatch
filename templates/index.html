@@ -1,113 +1,91 @@
 {% extends 'base.html' %}
 
 {% block head %}
-  
   <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
 {% endblock %}
     
 {% block body %}
 
-  <!-- Navbar -->
-  <section class="navb" id="navlock">
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
-      <a class="navbar-brand" href="#"><i class="fas fa-video"></i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">              
-                  <i id="searchbtn" class=" fa fa-search nav-search"></i>
-          </li>
-         
-          
-        </ul>          
-        
-      </div>
-    </nav>
-  </section>
-
-
 <!-- Main Searchbar -->
 <div id="cotitle">
   BingeWatch
 </div>
+
   <div class="wrapper">
-   <section class="searchbar container">
-      <form action="" method="POST">
-        <input name="search" id="search" type="text" spellcheck="false" placeholder="Search...">
-        <i class="fa fa-search"></i>
-      </form>
-   </section>
+     <section class="searchbar container">
+        <form autocomplete="off" action="" method="POST">
+            <input name="search" id="search" type="text" spellcheck="false" placeholder="Search...">
+            <i class="fa fa-search"></i>
+        </form>
+     </section>
   </div>
 
-
-    <div id="carousel">
-        <div class="hideLeft">
-            <img src="{{ images[0]['poster'] }}">
-            <div class="carousel-title">
-              {{ images[0]['title'] }}
-            </div>
-          </div>
-       
-          <div class="prevLeftSecond">
-            <img src="{{ images[1]['poster'] }}">
-            <div class="carousel-title">
-              {{ images[1]['title'] }}
-            </div>
-          </div>
-       
-          <div class="prev">
-            <img src="{{ images[2]['poster'] }}">
-            <div class="carousel-title">
-              {{ images[2]['title'] }}
-            </div>
-          </div>
-       
-          <div class="selected">
-            <img src="{{ images[3]['poster'] }}">
-            <div class="carousel-title">
-              {{ images[3]['title'] }}
-            </div>
-          </div>
-       
-          <div class="next">
-            <img src="{{ images[4]['poster'] }}">
-            <div class="carousel-title">
-              {{ images[4]['title'] }}
-            </div>
-          </div>
-       
-          <div class="nextRightSecond">
-            <img src="{{ images[5]['poster'] }}">
-             <div class="carousel-title">
-               {{ images[5]['title'] }}
-             </div>
-            
-          </div>
-       
-          <div class="hideRight">
-            <img src="{{ images[6]['poster'] }}">
-             <div class="carousel-title">
-               {{ images[6]['title'] }}
+  <div id="carousel">   
+      <div class="prevLeftSecond">
+        <form class="carousel-form" action="" method="POST">
+          <input type="hidden" name="search" value="{{ images[0]['title'] }}">
+            <button type="submit">
+              <img src="{{ images[0]['poster'] }}">
+              <div class="carousel-title">
+                {{ images[0]['title'] }}
               </div>
-          </div>
+            </button>
+        </form>
+      </div>
+      
+      <div class="prev">
+          <form class="carousel-form" action="" method="POST">
+            <input type="hidden" name="search" value="{{ images[1]['title'] }}">
+              <button type="submit">
+                <img src="{{ images[1]['poster'] }}">
+                <div class="carousel-title">
+                  {{ images[1]['title'] }}
+                </div>
+              </button>
+          </form>
+      </div>
 
-    </div>
-
+      <div class="selected">
+          <form class="carousel-form" action="" method="POST">
+            <input type="hidden" name="search" value="{{ images[2]['title'] }}">
+              <button type="submit">
+                <img src="{{ images[2]['poster'] }}">
+                <div class="carousel-title">
+                  {{ images[2]['title'] }}
+                </div>
+              </button>
+          </form>
+      </div>
+    
+      <div class="next">
+          <form class="carousel-form" action="" method="POST">
+            <input type="hidden" name="search" value="{{ images[3]['title'] }}">
+              <button type="submit">
+                <img src="{{ images[3]['poster'] }}">
+                <div class="carousel-title">
+                  {{ images[3]['title'] }}
+                </div>
+              </button>
+          </form>
+      </div>
+    
+      <div class="nextRightSecond">
+          <form class="carousel-form" action="" method="POST">
+            <input type="hidden" name="search" value="{{ images[4]['title'] }}">
+              <button type="submit">
+                <img src="{{ images[4]['poster'] }}">
+                <div class="carousel-title">
+                  {{ images[4]['title'] }}
+                </div>
+              </button>
+          </form>
+      </div>
+      
+</div>
 
 <footer>
   BingeWatch
 </footer>
-
 
 <!-- Scripts -->
   
@@ -117,5 +95,4 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}" ></script>
    
-
-  {% endblock %}
+{% endblock %}

@@ -26,6 +26,7 @@ providers={
         }
 
 lang={
+    
     'en':'English',
     'hi':'Hindi',
     'pa':'Punjabi',
@@ -58,19 +59,23 @@ def createResponse(query):
     result['year']=jw['original_release_year']
     result['tmdb']=round(jw['tmdb_popularity'],2)
     result['poster']=base_url + jw['poster'].split('{')[0] + poster_size
-    offers=jw['offers']
-    provider_id=[]
     provider_list=[]
-    for offer in offers:
-        if offer['provider_id'] not in provider_id:
-            id=offer['provider_id']
-            provider={}
-            provider_id.append(id)
-            provider['name']=providers[id]['name']
-            provider['icon']=base_url + providers[id]['link'] + icon_size
-            provider['link']=offer['urls']['standard_web']
-            provider_list.append(provider)
-    result['providers']=provider_list
+
+    if 'offers' in jw:
+        offers=jw['offers']
+        provider_id=[]
+        
+        for offer in offers:
+            if offer['provider_id'] not in provider_id:
+                id=offer['provider_id']
+                provider={}
+                provider_id.append(id)
+                provider['name']=providers[id]['name']
+                provider['icon']=base_url + providers[id]['link'] + icon_size
+                provider['link']=offer['urls']['standard_web']
+                provider_list.append(provider)
+
+    result['providers']=provider_list    
             
     for score in jw['scoring']:
         if score['provider_type']=='imdb:score':
@@ -83,7 +88,7 @@ def createResponse(query):
 def getImageLinks():
     
     jw = JustWatch(country='IN',genres=['act', 'scf', 'com'])
-    results = jw.search_for_item()['items'][:7]
+    results = jw.search_for_item()['items'][:5]
     resultsArr=[]
     for item in results:
         resultsArr.append({
@@ -91,6 +96,5 @@ def getImageLinks():
             'poster':base_url + item['poster'].split('{')[0] + poster_size
         })
     
-
     return resultsArr
     

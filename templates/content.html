@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 
 {% block head %}
-	
 	<link rel="stylesheet" href="{{url_for('static', filename='css/contentstyle.css') }}">
 {% endblock %}
-
 
 {% block body %}
 
@@ -13,8 +11,9 @@
 			<i class="fa fa-home" aria-hidden="true"></i>
 	</a>
 </div>
+
 <div class="main-card">
-	<img src="{{result['poster']}}" class="backimg"/>
+	<img src="{{result['poster']}}" class="backimg"/>	
 	
 	<span id="cardtitle">
 		{{result['title']}}
@@ -24,18 +23,22 @@
 		<p>Type</p>
 		<p>Language</p>
 	</div>
+
 	<div class="head2">
 		<p>{{result['type']}}</p>
 		<p>{{result['lang']}}</p>
 	</div>
+
 	<div class="head1">
 		<p>Release Year</p>
 		<p>TMDB</p>
 	</div>
+
 	<div class="head2">
 		<p>{{result['year']}}</p>
 		<p>{{result['tmdb']}}</p>
 	</div>
+
 </div>
 
 <div class="info">
@@ -47,8 +50,9 @@
 
 	<section class="info-desc">
 		<h1 class="info-desc-heading headig">
-			Description
+			Plot
 		</h1>
+		
 		<p>
 			{{result['desc']}}
 		</p>
@@ -74,7 +78,6 @@
 				</a>
 			{% endfor %}
 		</section>
-
 </div>
 
 {% endblock %}

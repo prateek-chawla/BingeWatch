@@ -23,7 +23,6 @@ function moveToSelected(element) {
   
     $(nextSecond).nextAll().removeClass().addClass('hideRight');
     $(prevSecond).prevAll().removeClass().addClass('hideLeft');
-  
   }
   
   $('#carousel div').click(function() {
@@ -38,27 +37,30 @@ function moveToSelected(element) {
     moveToSelected('next');
   });
   
-/////////////////////////////
 
-
-mybutton = document.getElementById("searchbtn");
+const mybutton = document.getElementById("searchbtn");
 mybutton.addEventListener("click",topFunction);
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    
     mybutton.style.display = "block";
-    
     mybutton.classList.remove("nav-search");
   } else {
     mybutton.style.display = "none";
   }
 }
 
-
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0; 
 }
+
+$('#carousel form').on('submit', function (e) {
+  var form = this;
+  setTimeout(function () {
+      form.submit();
+  }, 400);
+  return false;
+});

@@ -1,0 +1,27 @@
+.content{
+    height: 75vh;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top:30%;
+    font-size: 3em;
+    font-family: 'Ubuntu';
+}
+
+.content i{
+    padding: 15px;
+}
+
+a:link, a:visited, a:active{
+    text-decoration:none;
+    color: white;
+}
+
+a:hover{
+    text-decoration:none;
+    color: rgb(134, 142, 212);
+}
+
+.api , .github {
+    margin : 20px;
+}
