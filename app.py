@@ -20,6 +20,6 @@ def about():
     return render('about.html')
 
 if __name__=="__main__":
-    app.run(debug=True , use_reloader=True, port=7050)
+    app.run(host='0.0.0.0' , use_reloader=True, port=5000)
 
  
