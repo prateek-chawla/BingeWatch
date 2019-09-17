@@ -55,7 +55,7 @@ def createResponse(query):
     result['type']=jw['object_type'].capitalize()
     result['desc']=jw['short_description']
     result['title']=jw['title']
-    result['lang']=lang[jw['original_language']]
+    result['lang']=lang.get(jw['original_language'], jw['original_language'])
     result['year']=jw['original_release_year']
     result['tmdb']=round(jw['tmdb_popularity'],2)
     result['poster']=base_url + jw['poster'].split('{')[0] + poster_size
