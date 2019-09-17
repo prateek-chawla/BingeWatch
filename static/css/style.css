@@ -18,6 +18,13 @@
     padding-bottom: 30vh;
 }
 
+.wrapper button{
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
 .searchbar form{
     display: block;
     position: relative;

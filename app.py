@@ -6,10 +6,14 @@ app=Flask(__name__)
 @app.route('/',methods=['POST','GET'])
 def index():
     if request.method=='POST':
-        result=createResponse(request.form['search'])
-        if result:
-            return render('content.html', result=result)
-        else:
+        try:
+            result=createResponse(request.form['search'])
+            if result:
+                return render('content.html', result=result)
+            else:
+                return render('404.html')
+        except:
+            # empty
             return render('404.html')
     else:
         images=getImageLinks()
