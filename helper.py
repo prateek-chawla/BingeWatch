@@ -52,13 +52,44 @@ def createResponse(query):
         return result
     
     jw=jwresponse['items'][0]
-    result['type']=jw['object_type'].capitalize()
-    result['desc']=jw['short_description']
-    result['title']=jw['title']
-    result['lang']=lang.get(jw['original_language'], jw['original_language'])
-    result['year']=jw['original_release_year']
-    result['tmdb']=round(jw['tmdb_popularity'],2)
-    result['poster']=base_url + jw['poster'].split('{')[0] + poster_size
+
+    try:
+        result['type']=jw['object_type'].capitalize()
+    except:
+        result['type']='Default'
+
+    try:
+        result['desc']=jw['short_description']
+    except:
+        result['desc']='Lorem Ipsum is simply dummy text of the printing and typesetting industry.\
+        Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,\
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+
+    try:
+        result['title']=jw['title']
+    except:
+        result['title']='Default'
+
+    try:
+        result['lang']=lang.get(jw['original_language'], jw['original_language'].capitalize())
+    except:
+        result['lang']='Default'
+
+    try:
+        result['year']=jw['original_release_year']
+    except:
+        result['year']='Default'
+
+    try:
+        result['tmdb']=round(jw['tmdb_popularity'],2)
+    except:
+        result['tmdb']='Default'
+
+    try:
+        result['poster']=base_url + jw['poster'].split('{')[0] + poster_size
+    except:
+        result['poster']='https://namotreks.com/wp-content/themes/himalayanbuddha/img/default.png'
+
     provider_list=[]
 
     if 'offers' in jw:
